@@ -19,11 +19,11 @@
 
 依赖安装
 
-### yarn run dev
+### npm run dev
 
 本地快速预览
 
-### yarn run build
+### npm run build
 
 本地构建，打包
 
