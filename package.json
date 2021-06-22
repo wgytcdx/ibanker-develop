@@ -1,0 +1,16 @@
+{
+    "name": "ibanker-develop",
+    "version": "1.0.0",
+    "description": "ibanker前端开发规范手册",
+    "main": "index.js",
+    "repository": "https://github.com/niceboybao/ibanker-develop.git",
+    "author": "wgytcdx <15267229907@163.com>",
+    "license": "MIT",
+    "scripts": {
+        "dev": "vuepress dev docs",
+        "build": "vuepress build docs"
+    },
+    "devDependencies": {
+        "vuepress": "^0.14.8"
+    }
+}
