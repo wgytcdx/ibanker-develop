@@ -5,15 +5,11 @@ next: ../code/html/
 
 # 命名规范
 
-![front-end-develop-standard02.jpg](../images/front-end-develop-standard02.jpg)
-
 ## 最佳原则
 
 坚持制定好的代码规范。
 
 无论团队人数多少，代码应该同出一门。
-
-如果你想要为这个规范做贡献或觉得有不合理的地方，请访问[New Issue](https://github.com/niceboybao/front-end-develop-standard/issues)。
 
 ## 文件结构命名
 
@@ -33,29 +29,29 @@ next: ../code/html/
 
 例：scripts, styles, images,components data_models
 
-### HTML文件命名
+### HTML 文件命名
 
 参照项目命名规则。
 
 例：error_report.html
 
-### CSS, SCSS文件命名
+### CSS, SCSS 文件命名
 
 参照项目命名规则。
 
 例：retina_sprites.scss
 
-### JS文件命名
+### JS 文件命名
 
 参照项目命名规则。
 
 例：account_model.js
 
-## CSS, SCSS类命名
+## CSS, SCSS 类命名
 
 - 类名使用小写字母，以中划线分隔
-- id采用驼峰式命名
-- scss中的变量、函数、混合、placeholder采用驼峰式命名
+- id 采用驼峰式命名
+- scss 中的变量、函数、混合、placeholder 采用驼峰式命名
 
 ```scss
 /* class */
@@ -87,18 +83,18 @@ $colorBlack: #000;
 }
 ```
 
-## JavaScript命名
+## JavaScript 命名
 
 ### 变量命名
 
-- 标准变量采用驼峰式命名（除了对象的属性外，主要是考虑到cgi返回的数据）
+- 标准变量采用驼峰式命名（除了对象的属性外，主要是考虑到 cgi 返回的数据）
 - 'ID'在变量名中全大写
 - 'URL'在变量名中全大写
 - 'Android'在变量名中大写第一个字母
 - 'iOS'在变量名中小写第一个，大写后两个字母
 - 常量全大写，用下划线连接
-- jquery对象必须以'$'开头命名
-- 对上下文this的引用只能使用'_this', 'that', 'self'其中一个来命名；
+- jquery 对象必须以'$'开头命名
+- 对上下文 this 的引用只能使用'\_this', 'that', 'self'其中一个来命名；
 
 ```javascript
 var thisIsMyName;
@@ -114,21 +110,21 @@ var iOSVersion;
 var MAX_COUNT = 10;
 
 function Person(name) {
-    this.name = name;
+  this.name = name;
 }
 
 // not good
-var body = $('body');
+var body = $("body");
 
 // good
-var $body = $('body');
+var $body = $("body");
 ```
 
 ### 函数命名
 
 - 普通行数，使用驼峰命名法
 - 构造函数，大写第一个字母
-- 不要给inline function命名；
+- 不要给 inline function 命名；
 
 ```javascript
 function doSomething(item) {

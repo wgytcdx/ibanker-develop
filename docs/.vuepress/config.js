@@ -28,11 +28,7 @@ module.exports = {
 			}
 		},
 		displayAllHeaders: true, // 展开所有标题
-		// 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
-		// repo: 'https://github.com/niceboybao/front-end-develop-standard',
-		// 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
 		// "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
-		// repoLabel: '查看源码',
 
 		// 以下为可选的编辑链接选项
 		// 假如你的文档仓库和项目本身不在一个仓库：
@@ -46,8 +42,8 @@ module.exports = {
 		// 默认为 "Edit this page"
 		editLinkText: '在GitHub上编辑此页面',
 		nav: [
-			{
-				text: '快速入门',
+            {
+				text: '项目应用',
 				link: '/'
 			},
 			{
@@ -57,6 +53,10 @@ module.exports = {
 			{
 				text: '代码规范',
 				items: [
+                    {
+                        text: '编程规约',
+                        link: '/code/total/'
+                    },
 					{
 						text: 'HTML',
 						link: '/code/html/'
@@ -78,15 +78,7 @@ module.exports = {
 						link: '/code/react/'
 					}
 				]
-			},
-			{
-				text: '项目应用',
-				link: '/use/'
-			},
-			{
-				text: '关于',
-				link: '/about/'
-			}
+			},	
 		],
 		sidebar: {
 			// 命名规范
@@ -95,6 +87,14 @@ module.exports = {
 					title: '',
 					collapsable: false,
 					children: [ '/name/' ]
+				}
+			],
+            // 编程规约 html
+			'/code/total/': [
+				{
+					title: '',
+					collapsable: false,
+					children: [ '/code/total/' ]
 				}
 			],
 			// 代码规范 html

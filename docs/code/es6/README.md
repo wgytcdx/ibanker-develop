@@ -5,8 +5,6 @@ next: ../../code/react/
 
 # ECMAScript 6 规范
 
-![front-end-develop-standard06-1.jpg](../../images/front-end-develop-standard06-1.jpg)
-
 ## 最佳原则
 
 坚持制定好的代码规范。

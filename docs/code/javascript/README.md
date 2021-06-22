@@ -3,9 +3,7 @@ prev: ../../code/css/
 next: ../../code/es6/
 ---
 
-# JavaScript规范
-
-![front-end-develop-standard05.jpg](../../images/front-end-develop-standard05.jpg)
+# JavaScript 规范
 
 ## 最佳原则
 
@@ -19,16 +17,16 @@ next: ../../code/es6/
 
 ### 1、缩进
 
-使用soft tab（4个空格）。
+使用 soft tab（4 个空格）。
 
 ```javascript
 var x = 1,
-    y = 1;
+  y = 1;
 
 if (x < y) {
-    x += 10;
+  x += 10;
 } else {
-    x += 1;
+  x += 1;
 }
 ```
 
@@ -53,7 +51,7 @@ x++;
 
 /* do-while */
 do {
-    x++;
+  x++;
 } while (x < 10);
 ```
 
@@ -66,27 +64,27 @@ do {
 - 代码块'{'前
 - 下列关键字前：else, while, catch, finally
 - 下列关键字后：if, else, for, while, do, switch, case, try, catch, finally, with, return, typeof
-- 单行注释'//'后（若单行注释和代码同行，则'//'前也需要），多行注释'*'后
+- 单行注释'//'后（若单行注释和代码同行，则'//'前也需要），多行注释'\*'后
 - 对象的属性值前
-- for循环，分号后留有一个空格，前置条件如果有多个，逗号后留一个空格
+- for 循环，分号后留有一个空格，前置条件如果有多个，逗号后留一个空格
 - 无论是函数声明还是函数表达式，'{'前一定要有空格
 - 函数的参数之间
 
 ```javascript
 // not good
 var a = {
-    b :1
+  b: 1,
 };
 
 // good
 var a = {
-    b: 1
+  b: 1,
 };
 
 // not good
-++ x;
-y ++;
-z = x?1:2;
+++x;
+y++;
+z = x ? 1 : 2;
 
 // good
 ++x;
@@ -94,33 +92,33 @@ y++;
 z = x ? 1 : 2;
 
 // not good
-var a = [ 1, 2 ];
+var a = [1, 2];
 
 // good
 var a = [1, 2];
 
 // not good
-var a = ( 1+2 )*3;
+var a = (1 + 2) * 3;
 
 // good
 var a = (1 + 2) * 3;
 
 // no space before '(', one space before '{', one space between function parameters
 var doSomething = function(a, b, c) {
-    // do something
+  // do something
 };
 
 // no space before '('
 doSomething(item);
 
 // not good
-for(i=0;i<6;i++){
-    x++;
+for (i = 0; i < 6; i++) {
+  x++;
 }
 
 // good
 for (i = 0; i < 6; i++) {
-    x++;
+  x++;
 }
 ```
 
@@ -130,16 +128,16 @@ for (i = 0; i < 6; i++) {
 
 ```javascript
 if (condition) {
-    // if you made it here, then all security checks passed
-    allowed();
+  // if you made it here, then all security checks passed
+  allowed();
 }
 
-var zhangsan = 'zhangsan'; // one space after code
+var zhangsan = "zhangsan"; // one space after code
 ```
 
 ### 5、多行注释
 
-最少三行, '*'后跟一个空格，具体参照右边的写法；
+最少三行, '\*'后跟一个空格，具体参照右边的写法；
 
 ```javascript
 /*
@@ -185,25 +183,25 @@ function foo(a, b, c, d, g, j) {
 var x = "test";
 
 // good
-var y = 'foo',
-    z = '<div id="test"></div>';
+var y = "foo",
+  z = '<div id="test"></div>';
 ```
 
 ### 8、变量声明
 
-一个函数作用域中所有的变量声明尽量提到函数首部，用一个var声明，不允许出现两个连续的var声明。
+一个函数作用域中所有的变量声明尽量提到函数首部，用一个 var 声明，不允许出现两个连续的 var 声明。
 
 ```javascript
 function doSomethingWithItems(items) {
-    // use one var
-    var value = 10,
-        result = value + 10,
-        i,
-        len;
+  // use one var
+  var value = 10,
+    result = value + 10,
+    i,
+    len;
 
-    for (i = 0, len = items.length; i < len; i++) {
-        result += 10;
-    }
+  for (i = 0, len = items.length; i < len; i++) {
+    result += 10;
+  }
 }
 ```
 
@@ -215,7 +213,7 @@ function doSomethingWithItems(items) {
 
 - 立即执行函数外必须包一层括号；
 
-- 不要给inline function命名；
+- 不要给 inline function 命名；
 
 - 参数之间用', '分隔，注意逗号后有一个空格。
 
@@ -285,20 +283,20 @@ var item = {};
 
 // not good
 var a = {
-    'b': 1
+  b: 1,
 };
 
-var a = {b: 1};
+var a = { b: 1 };
 
 var a = {
-    b: 1,
-    c: 2,
+  b: 1,
+  c: 2,
 };
 
 // good
 var a = {
-    b: 1,
-    c: 2
+  b: 1,
+  c: 2,
 };
 ```
 
@@ -308,12 +306,11 @@ var a = {
 
 ```javascript
 // not good
-if (condition)
-    doSomething();
+if (condition) doSomething();
 
 // good
 if (condition) {
-    doSomething();
+  doSomething();
 }
 ```
 
@@ -328,7 +325,7 @@ if (condition) {
 
 不适用场景：
 
-- 不要用null来判断函数调用时有无传参
+- 不要用 null 来判断函数调用时有无传参
 - 不要与未初始化的变量做比较
 
 ```javascript
@@ -356,9 +353,9 @@ if (a === null) {
 
 ### 14、undefined
 
-- 永远不要直接使用undefined进行变量判断；
+- 永远不要直接使用 undefined 进行变量判断；
 
-- 使用typeof和字符串'undefined'对变量进行判断。
+- 使用 typeof 和字符串'undefined'对变量进行判断。
 
 ```javascript
 // not good
@@ -376,9 +373,9 @@ if (typeof person === 'undefined') {
 
 - 用'===', '!=='代替'==', '!='；
 
-- for-in里一定要有hasOwnProperty的判断；
+- for-in 里一定要有 hasOwnProperty 的判断；
 
-- 不要在内置对象的原型上添加方法，如Array, Date；
+- 不要在内置对象的原型上添加方法，如 Array, Date；
 
 - 不要在内层作用域的代码里声明了变量，之后却访问到了外层作用域的同名变量；
 
@@ -390,13 +387,13 @@ if (typeof person === 'undefined') {
 
 - 不要在一些不需要的地方加括号，例：delete(a.b)；
 
-- 不要使用未声明的变量（全局变量需要加到.jshintrc文件的globals属性里面）；
+- 不要使用未声明的变量（全局变量需要加到.jshintrc 文件的 globals 属性里面）；
 
 - 不要声明了变量却不使用；
 
 - 不要在应该做比较的地方做赋值；
 
-- debugger不要出现在提交的代码里；
+- debugger 不要出现在提交的代码里；
 
 - 数组中不要存在空元素；
 
@@ -407,43 +404,43 @@ if (typeof person === 'undefined') {
 ```javascript
 // not good
 if (a == 1) {
-    a++;
+  a++;
 }
 
 // good
 if (a === 1) {
-    a++;
+  a++;
 }
 
 // good
 for (key in obj) {
-    if (obj.hasOwnProperty(key)) {
-        // be sure that obj[key] belongs to the object and was not inherited
-        console.log(obj[key]);
-    }
+  if (obj.hasOwnProperty(key)) {
+    // be sure that obj[key] belongs to the object and was not inherited
+    console.log(obj[key]);
+  }
 }
 
 // not good
 Array.prototype.count = function(value) {
-    return 4;
+  return 4;
 };
 
 // not good
 var x = 1;
 
 function test() {
-    if (true) {
-        var x = 0;
-    }
+  if (true) {
+    var x = 0;
+  }
 
-    x += 1;
+  x += 1;
 }
 
 // not good
 function test() {
-    console.log(x);
+  console.log(x);
 
-    var x = 1;
+  var x = 1;
 }
 
 // not good
@@ -453,14 +450,14 @@ new Person();
 var person = new Person();
 
 // not good
-delete(obj.attr);
+delete obj.attr;
 
 // good
 delete obj.attr;
 
 // not good
-if (a = 10) {
-    a++;
+if ((a = 10)) {
+  a++;
 }
 
 // not good
@@ -470,40 +467,40 @@ var a = [1, , , 2, 3];
 var nums = [];
 
 for (var i = 0; i < 10; i++) {
-    (function(i) {
-        nums[i] = function(j) {
-            return i + j;
-        };
-    }(i));
+  (function(i) {
+    nums[i] = function(j) {
+      return i + j;
+    };
+  })(i);
 }
 
 // not good
 var singleton = new function() {
-    var privateVar;
+  var privateVar;
 
-    this.publicMethod = function() {
-        privateVar = 1;
-    };
+  this.publicMethod = function() {
+    privateVar = 1;
+  };
 
-    this.publicMethod2 = function() {
-        privateVar = 2;
-    };
-};
+  this.publicMethod2 = function() {
+    privateVar = 2;
+  };
+}();
 ```
 
 ## 其他杂项规范
 
-- 不要混用tab和space；
+- 不要混用 tab 和 space；
 
-- 不要在一处使用多个tab或space；
+- 不要在一处使用多个 tab 或 space；
 
 - 换行符统一用'LF'；
 
-- 对上下文this的引用只能使用'_this', 'that', 'self'其中一个来命名；
+- 对上下文 this 的引用只能使用'\_this', 'that', 'self'其中一个来命名；
 
 - 行尾不要有空白字符；
 
-- switch的falling through和no default的情况一定要有注释特别说明；
+- switch 的 falling through 和 no default 的情况一定要有注释特别说明；
 
 - 不允许有空的代码块。
 
@@ -548,6 +545,6 @@ if (condition) {
 
 ## 写在最后
 
-### 1、JavaScript代码格式化
+### 1、JavaScript 代码格式化
 
-> JavaScript的代码格式化，能解决部分JavaScript代码规范，如代码缩进、空格、分号、换行、引号、大小括号间隔对称等。所以能解决的这些规范仅供参考。
+> JavaScript 的代码格式化，能解决部分 JavaScript 代码规范，如代码缩进、空格、分号、换行、引号、大小括号间隔对称等。所以能解决的这些规范仅供参考。

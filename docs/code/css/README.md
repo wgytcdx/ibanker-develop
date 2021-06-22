@@ -5,7 +5,6 @@ next: ../../code/javascript/
 
 # css规范
 
-![front-end-develop-standard04.jpg](../../images/front-end-develop-standard04.jpg)
 
 ## 最佳原则
 

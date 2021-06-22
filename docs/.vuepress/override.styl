@@ -6,3 +6,18 @@ blockquote
   border-left .25rem solid #dfe2e5
   margin-left 0
   padding-left 1rem
+body a,.dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active,.dropdown-wrapper .nav-dropdown .dropdown-item a:hover,body a.sidebar-link:hover
+  color #ff8001
+a.sidebar-link.active
+  color #ff8001
+  border-left-color  #ff8001
+
+.nav-item > a:not(.external):hover, .nav-item > a:not(.external).router-link-active
+  border-bottom 2px solid #ff8001
+
+.search-box input:focus
+  color #ff8001
+  border-color #ff8001
+
+.dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after
+  border-left 5px solid #ff8001

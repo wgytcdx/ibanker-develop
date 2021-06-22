@@ -1,11 +1,9 @@
 ---
-prev: ../../name/
+prev: ../../code/total/
 next: ../../code/css/
 ---
 
-# HTML规范
-
-![front-end-develop-standard03.jpg](../../images/front-end-develop-standard03.jpg)
+# HTML 规范
 
 ## 最佳原则
 
@@ -13,17 +11,15 @@ next: ../../code/css/
 
 无论团队人数多少，代码应该同出一门。
 
-如果你想要为这个规范做贡献或觉得有不合理的地方，请访问[New Issue](https://github.com/niceboybao/front-end-develop-standard/issues)。
-
 ## 基本语法
 
-- 缩进使用soft tab（推荐4个空格），总之缩进统一即可；
-- 嵌套的节点应该缩进(4个空格）)；
+- 缩进使用 soft tab（推荐 4 个空格），总之缩进统一即可；
+- 嵌套的节点应该缩进(4 个空格）)；
 - 在属性上，使用`" "`，不要使用`' '`；
 - 属性名全小写，用中划线做分隔符；
 - 不要在自动闭合标签结尾处使用斜线（HTML5 规范 指出他们是可选的）；
 - 不要忽略可选的关闭标签，例：`</li>` 和 `</body>`。
-- 在页面开头使用这个简单地doctype来启用标准模式，使其在每个浏览器中尽可能一致的展现；
+- 在页面开头使用这个简单地 doctype 来启用标准模式，使其在每个浏览器中尽可能一致的展现；
 
 ```html
 <!DOCTYPE html>
@@ -40,13 +36,13 @@ next: ../../code/css/
 
 ## 基本属性
 
-> 根据HTML5规范：应在html标签上加上lang属性。这会给语音工具和翻译工具帮助，告诉它们应当怎么去发音和翻译。
+> 根据 HTML5 规范：应在 html 标签上加上 lang 属性。这会给语音工具和翻译工具帮助，告诉它们应当怎么去发音和翻译。
 
 > 字符编码：通过声明一个明确的字符编码，让浏览器轻松、快速的确定适合网页内容的渲染方式，通常指定为'UTF-8'。
 
-> IE兼容模式：用 `<meta>` 标签可以指定页面应该用什么版本的IE来渲染；
+> IE 兼容模式：用 `<meta>` 标签可以指定页面应该用什么版本的 IE 来渲染；
 
-> viewport：一般用来定义浏览器窗口内容区的大小，不包含工具条、选项卡等内容；特别是最H5移动端适配建议加上。
+> viewport：一般用来定义浏览器窗口内容区的大小，不包含工具条、选项卡等内容；特别是最 H5 移动端适配建议加上。
 
 ```html
 <!DOCTYPE html>
@@ -59,9 +55,9 @@ next: ../../code/css/
 </html>
 ```
 
-## 引入CSS, JS
+## 引入 CSS, JS
 
-根据HTML5规范, 通常在引入CSS和JS时不需要指明 type，因为 `text/css` 和 `text/javascript` 分别是他们的默认值。
+根据 HTML5 规范, 通常在引入 CSS 和 JS 时不需要指明 type，因为 `text/css` 和 `text/javascript` 分别是他们的默认值。
 
 ```html
 <!-- External CSS -->
@@ -88,15 +84,15 @@ next: ../../code/css/
 - class
 - id
 - name
-- data-*
+- data-\*
 - src, for, type, href, value , max-length, max, min, pattern
 - placeholder, title, alt
-- aria-*, role
+- aria-\*, role
 - required, readonly, disabled
 
-> class是为高可复用组件设计的，所以应处在第一位；
+> class 是为高可复用组件设计的，所以应处在第一位；
 
-> id更加具体且应该尽量少使用，所以将它放在第二位。
+> id 更加具体且应该尽量少使用，所以将它放在第二位。
 
 ```html
 <a class="..." id="..." data-modal="toggle" href="#">Example link</a>
@@ -108,7 +104,7 @@ next: ../../code/css/
 
 ## 布尔值属性
 
-boolean属性指不需要声明取值的属性，XHTML需要每个属性声明取值，但是HTML5并不需要；boolean属性的存在表示取值为true，不存在则表示取值为false。
+boolean 属性指不需要声明取值的属性，XHTML 需要每个属性声明取值，但是 HTML5 并不需要；boolean 属性的存在表示取值为 true，不存在则表示取值为 false。
 
 ```html
 <input type="text" disabled>
@@ -122,13 +118,13 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 
 ## 标签操作
 
-### 1、JS生成标签
+### 1、JS 生成标签
 
-在JS文件中生成标签让内容变得更难查找，更难编辑，性能更差。应该尽量避免这种情况的出现。
+在 JS 文件中生成标签让内容变得更难查找，更难编辑，性能更差。应该尽量避免这种情况的出现。
 
 ### 2、减少标签数量
 
-在编写HTML代码时，需要尽量避免多余的父节点；很多时候，需要通过迭代和重构来使HTML变得更少。
+在编写 HTML 代码时，需要尽量避免多余的父节点；很多时候，需要通过迭代和重构来使 HTML 变得更少。
 
 ```html
 <!-- Not well -->
@@ -154,8 +150,8 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 
 ### 2、实用高于完美
 
-> 尽量遵循HTML标准和语义，但是不应该以浪费实用性作为代价；任何时候都要用尽量小的复杂度和尽量少的标签来解决问题。
+> 尽量遵循 HTML 标准和语义，但是不应该以浪费实用性作为代价；任何时候都要用尽量小的复杂度和尽量少的标签来解决问题。
 
-### 3、html代码格式化
+### 3、html 代码格式化
 
-> html的代码格式化，能解决部分html代码规范，如缩进、空格、标签对称等。所以能解决的这些规范仅供参考。
+> html 的代码格式化，能解决部分 html 代码规范，如缩进、空格、标签对称等。所以能解决的这些规范仅供参考。
