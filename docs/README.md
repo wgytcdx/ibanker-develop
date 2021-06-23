@@ -1,6 +1,6 @@
 ---
-prev: ../code/javascript/
-# next: ../about/
+# prev: ../code/javascript/
+next: ./name/
 editLink: true
 ---
 
