@@ -898,9 +898,7 @@ export const reload = [
 
 ##### 4) router 中的 path 命名规范
 
-path 除了采用`kebab-case`命名规范以外，必须以 / 开头，即使是 children 里的 path 也要以 / 开头。如下示例
-
--
+path 除了采用`kebab-case`命名规范以外，必须以 / 开头，即使是 children 里的 path 也要以 / 开头。
 
 目的：
 

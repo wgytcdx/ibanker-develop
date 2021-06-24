@@ -5,14 +5,6 @@ next: ../../code/react/
 
 # ECMAScript 6 规范
 
-## 最佳原则
-
-坚持制定好的代码规范。
-
-无论团队人数多少，代码应该同出一门。
-
-如果你想要为这个规范做贡献或觉得有不合理的地方，请访问[New Issue](https://github.com/niceboybao/front-end-develop-standard/issues)。
-
 ## ES6 基本规范
 
 ### 1、引用
@@ -80,7 +72,7 @@ const item = {};
 const atom = {
   value: 1,
 
-  addValue: function (value) {
+  addValue: function(value) {
     return atom.value + value;
   },
 };
@@ -98,7 +90,7 @@ const atom = {
 - 使用对象属性值的简写；
 
 ```javascript
-const lukeSkywalker = 'Luke Skywalker';
+const lukeSkywalker = "Luke Skywalker";
 
 // bad
 const obj = {
@@ -128,12 +120,11 @@ const items = [];
 ```javascript
 const someStack = [];
 
-
 // bad
-someStack[someStack.length] = 'abracadabra';
+someStack[someStack.length] = "abracadabra";
 
 // good
-someStack.push('abracadabra');
+someStack.push("abracadabra");
 ```
 
 - 使用拓展运算符 ... 复制数组；
@@ -155,7 +146,7 @@ const itemsCopy = [...items];
 - 使用 Array#from 把一个类数组对象转换成数组；
 
 ```javascript
-const foo = document.querySelectorAll('.foo');
+const foo = document.querySelectorAll(".foo");
 const nodes = Array.from(foo);
 ```
 
@@ -197,19 +188,19 @@ const second = arr[1];
 const [first, second] = arr;
 ```
 
-### 5、Strings字符处理
+### 5、Strings 字符处理
 
 程序化生成字符串时，使用模板字符串代替字符串连接。
 
 ```javascript
 // bad
 function sayHi(name) {
-  return 'How are you, ' + name + '?';
+  return "How are you, " + name + "?";
 }
 
 // bad
 function sayHi(name) {
-  return ['How are you, ', name, '?'].join();
+  return ["How are you, ", name, "?"].join();
 }
 
 // good
@@ -228,7 +219,7 @@ function sayHi(name) {
 
 ```javascript
 // bad
-[1, 2, 3].map(function (x) {
+[1, 2, 3].map(function(x) {
   const y = x + 1;
   return x * y;
 });
@@ -248,7 +239,7 @@ function sayHi(name) {
 
 ```javascript
 // good
-[1, 2, 3].map(x => x * x);
+[1, 2, 3].map((x) => x * x);
 
 // good
 [1, 2, 3].reduce((total, n) => {
@@ -269,8 +260,7 @@ Queue.prototype.pop = function() {
   const value = this._queue[0];
   this._queue.splice(0, 1);
   return value;
-}
-
+};
 
 // good
 class Queue {
@@ -289,14 +279,14 @@ class Queue {
 
 ```javascript
 // bad
-const inherits = require('inherits');
+const inherits = require("inherits");
 function PeekableQueue(contents) {
   Queue.apply(this, contents);
 }
 inherits(PeekableQueue, Queue);
 PeekableQueue.prototype.peek = function() {
   return this._queue[0];
-}
+};
 
 // good
 class PeekableQueue extends Queue {
@@ -338,8 +328,7 @@ class Jedi {
 
 const luke = new Jedi();
 
-luke.jump()
-  .setHeight(20);
+luke.jump().setHeight(20);
 ```
 
 ### 8、函数参数
@@ -350,12 +339,12 @@ luke.jump()
 // bad
 function concatenateAll() {
   const args = Array.prototype.slice.call(arguments);
-  return args.join('');
+  return args.join("");
 }
 
 // good
 function concatenateAll(...args) {
-  return args.join('');
+  return args.join("");
 }
 ```
 
@@ -403,7 +392,7 @@ sum === 15;
 
 // good
 let sum = 0;
-numbers.forEach((num) => sum += num);
+numbers.forEach((num) => (sum += num));
 sum === 15;
 
 // best (use the functional force)
@@ -437,10 +426,10 @@ export default es6;
 
 ```javascript
 // bad
-import * as AirbnbStyleGuide from './AirbnbStyleGuide';
+import * as AirbnbStyleGuide from "./AirbnbStyleGuide";
 
 // good
-import AirbnbStyleGuide from './AirbnbStyleGuide';
+import AirbnbStyleGuide from "./AirbnbStyleGuide";
 ```
 
 - 不要从 import 中直接 export。
@@ -460,6 +449,6 @@ export default es6;
 
 ## 写在最后
 
-### 1、JavaScript代码格式化
+### 1、JavaScript 代码格式化
 
-> JavaScript的代码格式化，能解决部分JavaScript代码规范，如代码缩进、空格、分号、换行、引号、大小括号间隔对称等。所以能解决的这些规范仅供参考。
+> JavaScript 的代码格式化，能解决部分 JavaScript 代码规范，如代码缩进、空格、分号、换行、引号、大小括号间隔对称等。所以能解决的这些规范仅供参考。

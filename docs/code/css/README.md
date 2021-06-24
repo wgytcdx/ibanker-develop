@@ -3,32 +3,23 @@ prev: ../../code/html/
 next: ../../code/javascript/
 ---
 
-# css规范
-
-
-## 最佳原则
-
-坚持制定好的代码规范。
-
-无论团队人数多少，代码应该同出一门。
-
-如果你想要为这个规范做贡献或觉得有不合理的地方，请访问[New Issue](https://github.com/niceboybao/front-end-develop-standard/issues)。
+# css 规范
 
 ## 基本规范
 
 ### 1、缩进
 
-使用soft tab（4个空格）。
+使用 soft tab（4 个空格）。
 
 ```css
 .element {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 
-    border-radius: 10px;
-    width: 50px;
-    height: 50px;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
 }
 ```
 
@@ -38,10 +29,10 @@ next: ../../code/javascript/
 
 ```css
 .element {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 
-    background-color: red;
+  background-color: red;
 }
 ```
 
@@ -69,60 +60,59 @@ next: ../../code/javascript/
 ```css
 /* not good */
 .element {
-    color :red! important;
-    background-color: rgba(0,0,0,.5);
+  color: red !important;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* good */
 .element {
-    color: red !important;
-    background-color: rgba(0, 0, 0, .5);
+  color: red !important;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* not good */
-.element ,
-.dialog{
-    ...
+.element,
+.dialog {
+  ...;
 }
 
 /* good */
 .element,
 .dialog {
-
 }
 
 /* not good */
-.element>.dialog{
-    ...
+.element > .dialog {
+  ...;
 }
 
 /* good */
-.element > .dialog{
-    ...
+.element > .dialog {
+  ...;
 }
 
 /* not good */
-.element{
-    ...
+.element {
+  ...;
 }
 
 /* good */
 .element {
-    ...
+  ...;
 }
 
 /* not good */
 @if{
-    ...
-}@else{
-    ...
+  ...;
+} @else {
+  ...;
 }
 
 /* good */
-@if {
-    ...
+@if{
+  ...;
 } @else {
-    ...
+  ...;
 }
 ```
 
@@ -131,32 +121,32 @@ next: ../../code/javascript/
 以下几种情况需要空行：
 
 - 文件最后保留一个空行
-- '}'后最好跟一个空行，包括scss中嵌套的规则
+- '}'后最好跟一个空行，包括 scss 中嵌套的规则
 - 属性之间需要适当的空行，具体见属性声明顺序
 
 ```css
 /* not good */
 .element {
-    ...
+  ...;
 }
 .dialog {
-    color: red;
-    &:after {
-        ...
-    }
+  color: red;
+  &:after {
+    ...;
+  }
 }
 
 /* good */
 .element {
-    ...
+  ...;
 }
 
 .dialog {
-    color: red;
+  color: red;
 
-    &:after {
-        ...
-    }
+  &:after {
+    ...;
+  }
 }
 ```
 
@@ -172,30 +162,33 @@ next: ../../code/javascript/
 
 ```css
 /* not good */
-.element
-{color: red; background-color: black;}
+.element {
+  color: red;
+  background-color: black;
+}
 
 /* good */
 .element {
-    color: red;
-    background-color: black;
+  color: red;
+  background-color: black;
 }
 
 /* not good */
-.element, .dialog {
-    ...
+.element,
+.dialog {
+  ...;
 }
 
 /* good */
 .element,
 .dialog {
-    ...
+  ...;
 }
 ```
 
 ### 6、注释
 
-- 注释统一用'/__/'（scss中也不要用'//'），具体参照右边的写法；
+- 注释统一用'/\_\_/'（scss 中也不要用'//'），具体参照右边的写法；
 
 - 缩进与下一行代码保持一致；
 
@@ -204,21 +197,21 @@ next: ../../code/javascript/
 ```css
 /* Modal header */
 .modal-header {
-    ...
+  ...;
 }
 
 /*
  * Modal header
  */
 .modal-header {
-    ...
+  ...;
 }
 
 .modal-header {
-    /* 50px */
-    width: 50px;
+  /* 50px */
+  width: 50px;
 
-    color: red; /* color red */
+  color: red; /* color red */
 }
 ```
 
@@ -226,36 +219,36 @@ next: ../../code/javascript/
 
 - 最外层统一使用双引号；
 
-- url的内容要用引号；
+- url 的内容要用引号；
 
 - 属性选择器中的属性值需要引号。
 
 ```css
 .element:after {
-    content: "";
-    background-image: url("logo.png");
+  content: "";
+  background-image: url("logo.png");
 }
 
 li[data-type="single"] {
-    ...
+  ...;
 }
 ```
 
 ### 8、颜色
 
-颜色16进制用小写字母；颜色16进制尽量用简写。
+颜色 16 进制用小写字母；颜色 16 进制尽量用简写。
 
 ```css
 /* not good */
 .element {
-    color: #ABCDEF;
-    background-color: #001122;
+  color: #abcdef;
+  background-color: #001122;
 }
 
 /* good */
 .element {
-    color: #abcdef;
-    background-color: #012;
+  color: #abcdef;
+  background-color: #012;
 }
 ```
 
@@ -275,15 +268,15 @@ li[data-type="single"] {
 ```css
 /* not good */
 .element {
-    transition: opacity 1s linear 2s;
+  transition: opacity 1s linear 2s;
 }
 
 /* good */
 .element {
-    transition-delay: 2s;
-    transition-timing-function: linear;
-    transition-duration: 1s;
-    transition-property: opacity;
+  transition-delay: 2s;
+  transition-timing-function: linear;
+  transition-duration: 1s;
+  transition-property: opacity;
 }
 ```
 
@@ -293,21 +286,21 @@ li[data-type="single"] {
 
 ```css
 .element {
-    ...
+  ...;
 }
 
-.element-avatar{
-    ...
+.element-avatar {
+  ...;
 }
 
 @media (min-width: 480px) {
-    .element {
-        ...
-    }
+  .element {
+    ...;
+  }
 
-    .element-avatar {
-        ...
-    }
+  .element-avatar {
+    ...;
+  }
 }
 ```
 
@@ -317,9 +310,9 @@ li[data-type="single"] {
 
 - 元素选择器用小写字母；
 
-- 去掉小数点前面的0；
+- 去掉小数点前面的 0；
 
-- 去掉数字中不必要的小数点和末尾的0；
+- 去掉数字中不必要的小数点和末尾的 0；
 
 - 属性值'0'后面不要加单位；
 
@@ -333,11 +326,11 @@ li[data-type="single"] {
 
 - 用 border: 0; 代替 border: none;；
 
-- 选择器不要超过4层（在scss中如果超过4层应该考虑用嵌套的方式来写）；
+- 选择器不要超过 4 层（在 scss 中如果超过 4 层应该考虑用嵌套的方式来写）；
 
 - 发布的代码中不要有 @import；
 
-- 尽量少用'*'选择器。
+- 尽量少用'\*'选择器。
 
 ```css
 /* not good */
@@ -345,83 +338,83 @@ li[data-type="single"] {
 }
 
 /* not good */
-LI {
-    ...
+li {
+  ...;
 }
 
 /* good */
 li {
-    ...
+  ...;
 }
 
 /* not good */
 .element {
-    color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 /* good */
 .element {
-    color: rgba(0, 0, 0, .5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 /* not good */
 .element {
-    width: 50.0px;
+  width: 50px;
 }
 
 /* good */
 .element {
-    width: 50px;
+  width: 50px;
 }
 
 /* not good */
 .element {
-    width: 0px;
+  width: 0px;
 }
 
 /* good */
 .element {
-    width: 0;
+  width: 0;
 }
 
 /* not good */
 .element {
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
 
-    background: linear-gradient(to bottom, #fff 0, #eee 100%);
-    background: -webkit-linear-gradient(top, #fff 0, #eee 100%);
-    background: -moz-linear-gradient(top, #fff 0, #eee 100%);
+  background: linear-gradient(to bottom, #fff 0, #eee 100%);
+  background: -webkit-linear-gradient(top, #fff 0, #eee 100%);
+  background: -moz-linear-gradient(top, #fff 0, #eee 100%);
 }
 
 /* good */
 .element {
-    -webkit-border-radius: 3px;
-       -moz-border-radius: 3px;
-            border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 
-    background: -webkit-linear-gradient(top, #fff 0, #eee 100%);
-    background:    -moz-linear-gradient(top, #fff 0, #eee 100%);
-    background:         linear-gradient(to bottom, #fff 0, #eee 100%);
+  background: -webkit-linear-gradient(top, #fff 0, #eee 100%);
+  background: -moz-linear-gradient(top, #fff 0, #eee 100%);
+  background: linear-gradient(to bottom, #fff 0, #eee 100%);
 }
 
 /* not good */
 .element {
-    color: rgb(0, 0, 0);
-    width: 50px;
-    color: rgba(0, 0, 0, .5);
+  color: rgb(0, 0, 0);
+  width: 50px;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 /* good */
 .element {
-    color: rgb(0, 0, 0);
-    color: rgba(0, 0, 0, .5);
+  color: rgb(0, 0, 0);
+  color: rgba(0, 0, 0, 0.5);
 }
 ```
 
 ## 写在最后
 
-### 1、css代码格式化
+### 1、css 代码格式化
 
-> css的代码格式化，能解决部分css代码规范，如代码缩进、空格、分号、换行、引号、颜色进制等。所以能解决的这些规范仅供参考。
+> css 的代码格式化，能解决部分 css 代码规范，如代码缩进、空格、分号、换行、引号、颜色进制等。所以能解决的这些规范仅供参考。
