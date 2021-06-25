@@ -8,7 +8,8 @@
     "license": "MIT",
     "scripts": {
         "dev": "vuepress dev docs",
-        "build": "vuepress build docs"
+        "build": "vuepress build docs",
+        "test": "cypress open"
     },
     "devDependencies": {
         "cypress": "^7.6.0",
