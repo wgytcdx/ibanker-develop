@@ -1,7 +1,16 @@
 ---
 prev: ../
-next: ../code/html/
+next: ../code/total/
 ---
+
+<!--
+ * @Author: Gaoyi Wang
+ * @Date: 2021-06-21 14:24:34
+ * @LastEditTime: 2021-06-28 20:59:38
+ * @LastEditors: Gaoyi Wang
+ * @Description: 新增命名规范
+ * @FilePath: docs/name/readme.md
+-->
 
 # 命名规范
 

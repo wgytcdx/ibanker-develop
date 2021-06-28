@@ -3,13 +3,22 @@ prev: ../../code/css/
 next: ../../code/es6/
 ---
 
+<!--
+ * @Author: Gaoyi Wang
+ * @Date: 2021-06-21 14:24:34
+ * @LastEditTime: 2021-06-28 20:56:38
+ * @LastEditors: Gaoyi Wang
+ * @Description: 新增js规范
+ * @FilePath: docs/javascript/readme.md
+-->
+
 # JavaScript 规范
 
 ## 基本规范
 
 ### 1、缩进
 
-使用 soft tab（4 个空格）。
+使用 soft tab（2 个空格）。
 
 ```javascript
 var x = 1,

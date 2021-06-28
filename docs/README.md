@@ -1,14 +1,22 @@
 ---
-# prev: ../code/javascript/
 next: ./name/
 editLink: true
 ---
+
+<!--
+ * @Author: Gaoyi Wang
+ * @Date: 2021-06-21 14:24:34
+ * @LastEditTime: 2021-06-28 20:58:38
+ * @LastEditors: Gaoyi Wang
+ * @Description: 新增项目应用规范
+ * @FilePath: docs/readme.md
+-->
 
 # 项目应用
 
 ## 现状分析
 
-在实际的项目开发过程中，每一位开发者不可能完全按照前端开发的规范来。前面规范手册里面就有说过，前端开发规范固然重要，但是不应该以浪费`实用性`或者`大量开发时间`作为代价；有的时候公司也不会给你那么多时间和精力做项目开发规范，毕竟很多老板认为最快时间把产品做出来才是真理。所以，这就是有些开发者虽然知道这些大厂的规范，但是很难落实的原因！
+在实际的项目开发过程中，每一位开发者不可能完全按照前端开发的规范来。前端开发规范固然重要，但是不应该以浪费`实用性`或者`大量开发时间`作为代价；有的时候公司也不会给你那么多时间和精力做项目开发规范，毕竟很多 BOSS 认为最快时间把产品做出来才是真理。所以，这就是有些开发者虽然知道这些大厂的规范，但是很难落实的原因！
 
 ## 如何解决
 
@@ -24,7 +32,7 @@ editLink: true
 
 ### 2、统一才是最好的规范
 
-规范中类似 html 的基本语法 如加上`DOCTYPE`、E 兼容模式和视网膜模式、标签缩进 4 格、属性使用`" "`等等，我们都不必太过在意，因为很多编辑器的插件都支持一键生成，项目组内部只需统一`一键生成的插件即可`，项目组内部对于 html 的规范重点是`标签语义化`、`如何减少标签的嵌套`等。
+规范中类似 html 的基本语法 如加上`DOCTYPE`、E 兼容模式和视网膜模式、标签缩进 2 格、属性使用`" "`等等，我们都不必太过在意，因为很多编辑器的插件都支持一键生成，项目组内部只需统一`一键生成的插件即可`，项目组内部对于 html 的规范重点是`标签语义化`、`如何减少标签的嵌套`等。
 
 同理可得，对于 css、js，或者是根据你所做项目而定的 ts、jsx、tsx 等等的文件，都可以内项目组内部制定一套统一的格式刷插件。比如我的 react 项目组就统一使用 VS Code 的 2 款格式刷插件
 
@@ -32,12 +40,12 @@ editLink: true
 
 [Prettier Now](https://marketplace.visualstudio.com/items?itemName=remimarsal.prettier-now) ： 支持语言比较全面的代码格式化插件，主要是支持 jsx /tsx ，还有 sass / less 等
 
-在比如，我们项目组内部还统一规范了代码缩进和文件头，规范代码缩进是为了提交或 merge 代码的时候能提高效率，加文件 header 和最近修改记录能快速定位问题和处理问题的人。需要了解更多 VS COde 项目实战内容[请参考](https://juejin.im/post/5b123ace6fb9a01e6f560a4b)
+在比如，我们项目组内部还统一规范了代码缩进和文件头，规范代码缩进是为了提交或 merge 代码的时候能提高效率，加文件 header 和最近修改记录能快速定位问题和处理问题的人。需要了解更多 VS Code 项目实战内容[请参考](https://juejin.im/post/5b123ace6fb9a01e6f560a4b)
 
 ```javascript
 {
     // 设置格式化缩进4格
-    "prettier.tabWidth": 4,
+    "prettier.tabWidth": 2,
     "vetur.format.defaultFormatter.html": "prettier",
     // 创建和更新代码的头部信息作者
     "fileheader.Author": "Gaoyi Wang",
@@ -62,14 +70,14 @@ editLink: true
 
 ### 2、更好的管理代码
 
-- 代码统一缩进 4 格；
+- 代码统一缩进 2 格；
 
 > 统一缩进能给代码提交、分支合并等减少很多麻烦
 
 ```javascript
 {
   // 设置格式化缩进4格
-  "prettier.tabWidth": 4,
+  "prettier.tabWidth": 2,
   "vetur.format.defaultFormatter.html": "prettier"
 }
 ```
@@ -85,24 +93,24 @@ editLink: true
   * @Date: 2020-10-08 10:34:37
   * @Last Modified by: Gaoyi Wang
   * @Last Modified time: 2020-11-21 10:23:58
-  * @Describe: 商机页面
+  * @Describe: 商机管理主页面
   */
 
   // settings
   {
     // 设置格式化缩进4格
-    "prettier.tabWidth": 4,
+    "prettier.tabWidth": 2,
     "vetur.format.defaultFormatter.html": "prettier"
   }
 ```
 
 - git 代码管理
 
-> 下载好用的 git 代码管理插件，下拉代码对比一下，merge 代码对比一下，代码提交前对比一下。
+> 下载好用的 git 代码管理插件，如：Sourcetree，下拉代码对比一下，merge 代码对比一下，代码提交前对比一下。
 
 ### 3、如何安装插件
 
-一般情况下直接在 VS Code 里面搜索到对应的插件下载即可，但我的项目组有自己的开发云桌面，访问不了外网，这种情况下插件安装就只能用`离线安装` 或者 `有网安装再拷贝了`，离线安装请自行百度或者 google[安装教程](https://www.cnblogs.com/majianguo/p/6561147.html)。
+一般情况下直接在 VS Code 里面搜索到对应的插件下载即可，但项目组有自己的开发云桌面，访问不了外网，这种情况下插件安装就只能用`离线安装` 或者 `有网安装再拷贝了`，离线安装请自行百度或者 google[安装教程](https://www.cnblogs.com/majianguo/p/6561147.html)。
 
 这里推荐`本地安装好再拷贝到云桌面`，本地安装好的自定义插件路径如下(默认安装路径，自己有手动修改的按修改后的查找)
 

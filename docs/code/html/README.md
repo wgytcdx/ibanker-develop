@@ -3,12 +3,21 @@ prev: ../../code/total/
 next: ../../code/css/
 ---
 
+<!--
+ * @Author: Gaoyi Wang
+ * @Date: 2021-06-21 14:24:34
+ * @LastEditTime: 2021-06-28 09:22:38
+ * @LastEditors: Gaoyi Wang
+ * @Description: 新增html规范
+ * @FilePath: docs/html/readme.md
+-->
+
 # HTML 规范
 
 ## 基本语法
 
-- 缩进使用 soft tab（推荐 4 个空格），总之缩进统一即可；
-- 嵌套的节点应该缩进(4 个空格）)；
+- 缩进使用 soft tab（推荐 2 个空格），总之缩进统一即可；
+- 嵌套的节点应该缩进(2 个空格）)；
 - 在属性上，使用`" "`，不要使用`' '`；
 - 属性名全小写，用中划线做分隔符；
 - 不要在自动闭合标签结尾处使用斜线（HTML5 规范 指出他们是可选的）；

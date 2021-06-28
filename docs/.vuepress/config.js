@@ -8,7 +8,7 @@
 module.exports = {
 	title: '前端开发规范手册',
 	description: '前端开发规范手册',
-	base: '/ibanker-develop/', // 将部署站点的基本URL
+	base: '/', // 将部署站点的基本URL
 	head: [
 		[
 			'link',
@@ -73,10 +73,6 @@ module.exports = {
 						text: 'ECMAScript 6',
 						link: '/code/es6/'
 					},
-					{
-						text: 'react',
-						link: '/code/react/'
-					}
 				]
 			},	
 		],
@@ -127,22 +123,6 @@ module.exports = {
 					title: '',
 					collapsable: false,
 					children: [ '/code/es6/' ]
-				}
-			],
-			// 代码规范 react
-			'/code/react/': [
-				{
-					title: '',
-					collapsable: false,
-					children: [ '/code/react/' ]
-				}
-			],
-			// 项目应用
-			'/use/': [
-				{
-					title: '',
-					collapsable: false,
-					children: [ '/use/' ]
 				}
 			],
 			// 快速入门

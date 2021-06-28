@@ -1,7 +1,15 @@
 ---
 prev: ../../code/javascript/
-next: ../../code/react/
 ---
+
+<!--
+ * @Author: Gaoyi Wang
+ * @Date: 2021-06-21 14:24:34
+ * @LastEditTime: 2021-06-28 21:00:02
+ * @LastEditors: Gaoyi Wang
+ * @Description: 新增es6规范
+ * @FilePath: docs/es6/readme.md
+-->
 
 # ECMAScript 6 规范
 
